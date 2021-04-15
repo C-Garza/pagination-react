@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
 import Posts from "./Posts";
+import styles from "./Feed.module.css";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -44,7 +45,7 @@ const Feed = () => {
   console.log(posts);
 
   return(
-    <div>
+    <div className={styles.container}>
       <Posts posts={posts} />
     </div>
   );

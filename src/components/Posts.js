@@ -1,13 +1,16 @@
+import Post from "./Post";
+import styles from "./Posts.module.css";
+
 const Posts = ({posts}) => {
   const renderPosts = () => {
     return posts.map(post => {
-      return <li key={post.id}>{post.title}</li>
+      return <Post key={post.id} post={post} />
     });
   };
 
   return(
-    <div>
-      <ul>
+    <div className={styles.container}>
+      <ul className={styles.list}>
         {renderPosts()}
       </ul>
     </div>
