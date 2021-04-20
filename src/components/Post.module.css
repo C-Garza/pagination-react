@@ -10,16 +10,18 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   z-index: -1;
+  border: 4px solid #343434;
 }
 .container {
   padding: 10px;
   border: 4px solid #343434;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: white;
   transition: all 0.1s;
   z-index: 1;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .heading {
   text-transform: capitalize;
