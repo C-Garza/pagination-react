@@ -9,3 +9,14 @@ body {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  text-transform: none;
+  background: none;
+}
