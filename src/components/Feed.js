@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import Posts from "./Posts";
 import styles from "./Feed.module.css";
 import PageNumbers from "./PageNumbers";
+import FeedData from "./FeedData";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -9,6 +10,7 @@ const Feed = () => {
   const [offset, setOffset] = useState(0);
   const [limit, setLimit] = useState(10);
   const url = "https://jsonplaceholder.typicode.com";
+  const limitOptions = [5,10,50,100];
 
   useEffect(() => {
     // fetchPosts(`${url}/posts?_start=${offset}&_limit=${limit}&_expand=user`); EZ way =P
@@ -35,7 +37,6 @@ const Feed = () => {
           }
         };
       });
-      console.log(data);
       setPosts(data);
       setTotalPosts(parseInt(response.headers.get("x-total-count"), 10));
       return data;
@@ -60,6 +61,7 @@ const Feed = () => {
 
   return(
     <div className={styles.container}>
+      <FeedData limit={limit} offset={offset} limitOptions={limitOptions} total={totalPosts} setLimit={setLimit} />
       <Posts posts={posts} />
       <PageNumbers pages={calculatePages()} currentPage={currentPage()} handlePageClick={handlePageClick} />
     </div>
