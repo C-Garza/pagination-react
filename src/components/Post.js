@@ -3,7 +3,6 @@ import styles from "./Post.module.css";
 const Post = ({post}) => {
   let randomColors = ["#f44336", "#ff9800", "#ffeb3b", "#4caf50", "#2196f3", "#3f51b5", "#673ab7"];
   let randomColor = Math.floor(Math.random() * randomColors.length);
-  console.log(randomColor);
 
   return(
     <li className={styles.post}>
