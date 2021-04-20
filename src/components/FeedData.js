@@ -1,6 +1,6 @@
 import styles from "./FeedData.module.css";
 
-const FeedData = ({limit, offset, limitOptions, total, setLimit}) => {
+const FeedData = ({limit, offset, setOffset, limitOptions, total, setLimit}) => {
   const renderOptions = () => {
     return limitOptions.map(option => {
       return <option key={option} value={option}>{option}</option>
@@ -13,7 +13,15 @@ const FeedData = ({limit, offset, limitOptions, total, setLimit}) => {
         <p>Showing {offset + limit} of {total}</p>
       </div>
       <div className={styles.input__container}>
-        <select value={limit} onChange={(e) => setLimit(parseInt(e.target.value, 10))} className={styles.input__select}>
+        <select 
+          value={limit} 
+          onChange={(e) => {
+              setLimit(parseInt(e.target.value, 10));
+              setOffset(0);
+            }
+          }
+          className={styles.input__select}
+        >
           {renderOptions()}
         </select>
       </div>

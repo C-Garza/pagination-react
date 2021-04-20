@@ -57,11 +57,16 @@ const Feed = () => {
     setOffset((e.target.innerText * limit) - limit);
   };
 
-  console.log(posts);
-
   return(
     <div className={styles.container}>
-      <FeedData limit={limit} offset={offset} limitOptions={limitOptions} total={totalPosts} setLimit={setLimit} />
+      <FeedData 
+        limit={limit} 
+        offset={offset} 
+        setOffset={setOffset} 
+        limitOptions={limitOptions} 
+        total={totalPosts} 
+        setLimit={setLimit} 
+      />
       <Posts posts={posts} />
       <PageNumbers pages={calculatePages()} currentPage={currentPage()} handlePageClick={handlePageClick} />
     </div>
