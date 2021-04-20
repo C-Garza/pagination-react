@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-self: stretch;
+}
+.button {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  font-weight: bold;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.button:hover {
+  background-color: #29B6F6;
+}
+.button__active {
+  background-color: #4FC3F7;
+}
