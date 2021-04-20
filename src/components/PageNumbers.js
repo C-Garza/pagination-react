@@ -6,7 +6,7 @@ const PageNumbers = ({pages, currentPage, handlePageClick}) => {
       i = i + 1;
       return (
       <button 
-        className={`${styles.button} ${i === currentPage ? styles.button__active : ""}`} 
+        className={`${styles.button} ${i === currentPage ? styles["button--active"] : ""}`} 
         type="button"
         key={num}
         onClick={handlePageClick}
