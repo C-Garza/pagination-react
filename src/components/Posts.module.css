@@ -1,5 +1,7 @@
 .container {
   margin-top: 25px;
+  margin-bottom: 25px;
+  align-self: stretch;
 }
 .list {
   display: flex;
