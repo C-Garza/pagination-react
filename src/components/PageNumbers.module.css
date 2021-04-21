@@ -2,10 +2,12 @@
   display: flex;
   justify-content: space-around;
   align-self: stretch;
+  flex-wrap: wrap;
 }
 .button {
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
+  flex: 1 0 25px;
   font-weight: bold;
   padding: 5px 10px;
   cursor: pointer;
